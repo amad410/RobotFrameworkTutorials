@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230616 10:10:52.444" rpa="false" schemaversion="4">
+<suite id="s1" name="RobotFramework" source="C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework">
+<suite id="s1-s1" name="Robot-Framework-Testautomationu-2022" source="C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\robot-framework-testautomationu-2022">
+<suite id="s1-s1-s1" name="001-DemoOfRobotFramework" source="C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\robot-framework-testautomationu-2022\001-DemoOfRobotFramework">
+<suite id="s1-s1-s1-s1" name="Tour-Of" source="C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\robot-framework-testautomationu-2022\001-DemoOfRobotFramework\tour-of.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Initialize Test Data</arg>
+<arg>Configure Selenium</arg>
+<arg>Navigate To Homepage</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Initialize Test Data" library="data">
+<kw name="Read Invoice Fixtures" library="data">
+<var>${json}</var>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_data}</var>
+<arg>${EXECDIR}/invoice-fixtures.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230616 10:10:52.632" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\invoice-fixtures.json"&gt;C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\invoice-fixtures.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230616 10:10:52.633" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Antwan.Maddox\\source\\repos\\Sandbox\\RobotFramework\\invoice-fixtures.json'</msg>
+<status status="FAIL" starttime="20230616 10:10:52.632" endtime="20230616 10:10:52.634"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230616 10:10:52.635" endtime="20230616 10:10:52.635"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:52.632" endtime="20230616 10:10:52.635"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Invoices}</arg>
+<arg>${json}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230616 10:10:52.635" endtime="20230616 10:10:52.635"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:52.632" endtime="20230616 10:10:52.635"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:52.632" endtime="20230616 10:10:52.635"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Create An Invoice" line="16">
+<status status="FAIL" starttime="20230616 10:10:52.636" endtime="20230616 10:10:52.636">Parent suite setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Antwan.Maddox\\source\\repos\\Sandbox\\RobotFramework\\invoice-fixtures.json'</status>
+</test>
+<kw name="Exit Selenium" library="system" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230616 10:10:52.640" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20230616 10:10:52.640" endtime="20230616 10:10:52.640"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 10:10:52.641" endtime="20230616 10:10:52.641"/>
+</kw>
+<status status="PASS" starttime="20230616 10:10:52.639" endtime="20230616 10:10:52.641"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:52.475" endtime="20230616 10:10:52.641">Suite setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Antwan.Maddox\\source\\repos\\Sandbox\\RobotFramework\\invoice-fixtures.json'</status>
+</suite>
+<status status="FAIL" starttime="20230616 10:10:52.471" endtime="20230616 10:10:52.644"/>
+</suite>
+<status status="FAIL" starttime="20230616 10:10:52.468" endtime="20230616 10:10:52.646"/>
+</suite>
+<status status="FAIL" starttime="20230616 10:10:52.451" endtime="20230616 10:10:52.649"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Robot-Framework-Testautomationu-2022">RobotFramework.Robot-Framework-Testautomationu-2022</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="001-DemoOfRobotFramework">RobotFramework.Robot-Framework-Testautomationu-2022.001-DemoOfRobotFramework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Tour-Of">RobotFramework.Robot-Framework-Testautomationu-2022.001-DemoOfRobotFramework.Tour-Of</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

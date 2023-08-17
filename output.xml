@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230616 10:10:51.658" rpa="false" schemaversion="4">
+<suite id="s1" name="Tour-Of" source="c:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\robot-framework-testautomationu-2022\001-DemoOfRobotFramework\tour-of.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Initialize Test Data</arg>
+<arg>Configure Selenium</arg>
+<arg>Navigate To Homepage</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Initialize Test Data" library="data">
+<kw name="Read Invoice Fixtures" library="data">
+<var>${json}</var>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_data}</var>
+<arg>${EXECDIR}/invoice-fixtures.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230616 10:10:51.880" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\invoice-fixtures.json"&gt;C:\Users\Antwan.Maddox\source\repos\Sandbox\RobotFramework\invoice-fixtures.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230616 10:10:51.885" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Antwan.Maddox\\source\\repos\\Sandbox\\RobotFramework\\invoice-fixtures.json'</msg>
+<status status="FAIL" starttime="20230616 10:10:51.879" endtime="20230616 10:10:51.886"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230616 10:10:51.887" endtime="20230616 10:10:51.887"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:51.879" endtime="20230616 10:10:51.887"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Invoices}</arg>
+<arg>${json}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230616 10:10:51.887" endtime="20230616 10:10:51.888"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:51.879" endtime="20230616 10:10:51.888"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:51.877" endtime="20230616 10:10:51.888"/>
+</kw>
+<test id="s1-t1" name="Create An Invoice" line="16">
+<status status="FAIL" starttime="20230616 10:10:51.888" endtime="20230616 10:10:51.890">Parent suite setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Antwan.Maddox\\source\\repos\\Sandbox\\RobotFramework\\invoice-fixtures.json'</status>
+</test>
+<kw name="Exit Selenium" library="system" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230616 10:10:51.893" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20230616 10:10:51.893" endtime="20230616 10:10:51.894"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 10:10:51.894" endtime="20230616 10:10:51.894"/>
+</kw>
+<status status="PASS" starttime="20230616 10:10:51.892" endtime="20230616 10:10:51.894"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:10:51.668" endtime="20230616 10:10:51.894">Suite setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Antwan.Maddox\\source\\repos\\Sandbox\\RobotFramework\\invoice-fixtures.json'</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tour-Of">Tour-Of</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
